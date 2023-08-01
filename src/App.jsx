@@ -6,10 +6,13 @@ import './App.css'
 import about from './about.js'
 import salutations from './salutations.js'
 import services from './services.js'
+import images from './gallery.js'
 import Hero from './components/Hero'
 import About from './components/About'
 import Cards from './components/Cards'
 import Consultation from './components/Consultation'
+import Testimonials from './components/Testimonials'
+
 
 
 function App() {
@@ -32,6 +35,14 @@ function App() {
     )
   })
 
+  const imageGalleryCards = images.map(item => {
+    return (
+      <Cards 
+        img={item.img}
+      />
+    )
+  })
+
   return (
     <>      
       <Navbar />      
@@ -44,7 +55,11 @@ function App() {
       <section className='flex flex-wrap justify-center text-sm mt-4 mb-20'>        
         {servicesCards}
       </section>  
-      <Consultation />    
+      <Consultation />
+      <section className='flex flex-wrap justify-center text-sm mt-4 mb-20'>        
+        {imageGalleryCards} 
+      </section>
+      <Testimonials />
     </>
   )
 }

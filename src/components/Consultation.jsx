@@ -5,7 +5,7 @@ const Consultation = () => {
             <div className='about-section my-10 flex flex-col md:w-[80%] md:mx-auto md:flex-row md:items-center'> 
             <div className='w-[80%] mx-auto md:w-[60%] lg:w-[45%]'>                 
                 <p className="text-center text-lg my-4">The client can make payment of dakshina at the following account:</p>
-                <div className='text-center font-bold border-2 border-orange-200 rounded-md my-4 p-4'>                     
+                <div className='text-center font-bold border-2 border-blue-200 rounded-md my-4 p-4'>                     
                     <p>
                     Beneficiary Name: Devarshi Dutta
                     </p>
