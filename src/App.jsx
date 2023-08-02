@@ -12,8 +12,8 @@ import About from './components/About'
 import Cards from './components/Cards'
 import Consultation from './components/Consultation'
 import Testimonials from './components/Testimonials'
-
-
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -60,6 +60,8 @@ function App() {
         {imageGalleryCards} 
       </section>
       <Testimonials />
+      <Contact />
+      <Footer />       
     </>
   )
 }
