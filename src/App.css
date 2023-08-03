@@ -15,11 +15,59 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #150F3DCC, #150F3D); /*Modify the gradient color as needed*/  
+  background: linear-gradient(to bottom, #150F3DCC, #150F3D); 
 }
 
-.footerClass{
-  background: linear-gradient(to bottom, #150F3DCC, #150F3D); /*Modify the gradient color as needed*/  
+.about-section{  
+  background: rgb(181,196,194);
+  background: linear-gradient(90deg, rgba(181,196,194,1) 0%, rgba(238,240,226,1) 50%, rgba(168,186,186,1) 100%); 
+}
+
+blockquote{
+  font-size: 1.4em;
+  width:100%;  
+  margin:0;
+  font-family: 'Edu SA Beginner', cursive;  
+  color: #555555;
+  padding:2px;  
+  line-height:1.6;
+  position: relative;    
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:rgb(102, 16, 16);
+  font-size:4em;
+  position: absolute;
+  left: -15px;
+  top:-75px;
+}
+
+blockquote span{
+  display:block;
+  color:#330606;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+  position: absolute;
+  text-align:end;  
+  width: 100%;  
+}
+
+blockquote::after{
+  font-family:Arial;
+  content: "\201D";
+  color:rgb(102, 16, 16);
+  font-size:4em;
+  position: absolute;
+  right: 10px;  
+  bottom: -75px;
+}
+
+.footer-section{
+  background: rgb(0,40,56);
+  background: linear-gradient(90deg, rgba(0,40,56,1) 0%, rgba(84,57,119,1) 50%, rgba(0,40,56,1) 100%);
   color: #fff;
 }
 

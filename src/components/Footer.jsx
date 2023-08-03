@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="footerClass w-full flex flex-col p-8 sm:flex-row sm:justify-evenly sm:p-8">
+        <footer className="footer-section w-full flex flex-col p-8 sm:flex-row sm:justify-evenly sm:p-8">
             <div className="flex justify-between md:w-[40%] md:justify-evenly">
                 <div className="sm:mr-8">
                     <p>Useful Links</p>

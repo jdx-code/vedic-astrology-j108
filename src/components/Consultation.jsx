@@ -1,8 +1,8 @@
 const Consultation = () => {
     return (
-        <div>
+        <div className='about-section md:w-full'>
             <h1 className='text-center text-xl font-extrabold my-4'>Procedure for availing consultation:</h1> 
-            <div className='about-section my-10 flex flex-col md:w-[80%] md:mx-auto md:flex-row md:items-center'> 
+            <div className='my-10 flex flex-col md:w-[80%] md:mx-auto md:flex-row md:items-center'> 
             <div className='w-[80%] mx-auto md:w-[60%] lg:w-[45%]'>                 
                 <p className="text-center text-lg my-4">The client can make payment of dakshina at the following account:</p>
                 <div className='text-center font-bold border-2 border-blue-200 rounded-md my-4 p-4'>                     
