@@ -8,20 +8,19 @@ const Cards = (props) => {
                     {props.name && (
                         <div class="card-body p-4 hover:border-blue-300">
                             <h2 class="card-title flex justify-between">
-                                <span class="font-bold"> {props.name} </span>
+                                <span class="font-bold mx-auto"> {props.name} </span>
                                 <div class="badge badge-secondary font-bold"></div>
                             </h2>                                              
                         </div>
-                    )}
-                    
+                    )}                    
                 </a>
-            ) : (                   
-                <div class="card-body p-4 hover:border-blue-300">
+            ) : (
+                <div class="card-body p-4 hover:border-blue-300">                    
                     <h2 class="card-title flex items-center justify-start p-4">
                         <i class="fa-regular fa-circle-check fa-2xl"></i>
                         <span class="font-bold mx-auto"> {props.item} </span>                            
                     </h2>                                              
-                </div>                    
+                </div>                                    
             )}            
         </div>
         

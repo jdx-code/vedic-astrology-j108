@@ -48,17 +48,26 @@ function App() {
       <Navbar />      
       <Hero />
       <About content={about[0].content} url={about[0].url}/>
-      <section className='flex flex-wrap justify-center text-sm mt-4 mb-20'>        
-        {salutationCards}
+      <section className='flex flex-col items-center'>                
+        <h1 className='text-4xl font-extrabold mt-8'>Salutation to Gurus and Gaurangas</h1>
+        <div className='flex flex-wrap justify-center text-sm mt-4 mb-20'>
+          {salutationCards}
+        </div>
       </section>      
-      <About content={about[1].content} url={about[1].url}/>
-      <section className='flex flex-wrap justify-center text-sm mt-4 mb-20'>        
-        {servicesCards}
+      <About content={about[1].content} url={about[1].url}/>             
+      <section className='flex flex-col items-center'>
+        <h1 className='text-4xl font-extrabold mt-8'>Services</h1>
+        <div className='flex flex-wrap justify-center text-sm mt-4 mb-20'>
+          {servicesCards}
+        </div>                 
       </section>  
       <Consultation />
-      <section className='flex flex-wrap justify-center text-sm mt-4 mb-20'>        
-        {imageGalleryCards} 
-      </section>
+      <section className='flex flex-col items-center'>
+        <h1 className='text-4xl font-extrabold mt-8'>Gallery</h1>
+        <div className='flex flex-wrap justify-center text-sm mt-4 mb-20'>
+          {imageGalleryCards} 
+        </div>                 
+      </section>        
       <Testimonials />
       <Contact />
       <Footer />       

@@ -28,7 +28,7 @@ blockquote{
   width:100%;  
   margin:0;
   font-family: 'Edu SA Beginner', cursive;  
-  color: #555555;
+  color: #0a2a3f;
   padding:2px;  
   line-height:1.6;
   position: relative;    
@@ -46,7 +46,7 @@ blockquote::before{
 
 blockquote span{
   display:block;
-  color:#330606;
+  color:#0a2a3f;
   font-style: normal;
   font-weight: bold;
   margin-top:1em;
@@ -62,7 +62,7 @@ blockquote::after{
   font-size:4em;
   position: absolute;
   right: 10px;  
-  bottom: -75px;
+  bottom: -105px;
 }
 
 .footer-section{
