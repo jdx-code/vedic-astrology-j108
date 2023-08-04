@@ -1,5 +1,5 @@
 import nataraja from '/nataraja.jpg'
-import logo from '/logo1.png'
+import logo from '/logo.png'
 
 const Hero = () => {
     return (
@@ -8,7 +8,7 @@ const Hero = () => {
                 <img src={logo} />
                 <div className='w-[80%] h-auto bg-gray-100 text-center border-4 border-blue-400 rounded-md'>
                     <p>For any queries call/whatsapp us at</p>
-                    <p className='text-3xl font-extrabold'>+91-9101489058</p>
+                    <p className='text-xl sm:text-2xl md:text-3xl font-extrabold'>+91-9101489058</p>
                 </div>                
             </div>   
             <div className='hidden right-content z-10 md:block lg:ml-20'>

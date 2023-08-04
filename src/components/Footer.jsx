@@ -1,23 +1,23 @@
 const Footer = () => {
     return (
-        <footer className="footer-section w-full flex flex-col p-8 sm:flex-row sm:justify-evenly sm:p-8 text-xs font-sans sm:text-sm">
+        <footer className="footer-section w-full flex flex-col p-8 sm:flex-row sm:justify-evenly sm:p-8 text-xs sm:text-sm">
             <div className="flex justify-between md:w-[40%] md:justify-evenly">
                 <div className="sm:mr-8">                    
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#" className="hover:text-[#b4c3c1]">Home</a>
                         </li>
                         <li>
-                            <a href="#about">About</a>
+                            <a href="#about" className="hover:text-[#b4c3c1]">About</a>
                         </li>
                         <li>
-                            <a href="#blogs">Blogs</a>
+                            <a href="#blogs" className="hover:text-[#b4c3c1]">Blogs</a>
                         </li>
                         <li>
-                            <a href="#services">Services</a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Services</a>
                         </li>                        
                         <li>
-                            <a href="#salutations">Salutations</a>
+                            <a href="#salutations" className="hover:text-[#b4c3c1]">Salutations</a>
                         </li>
                     </ul>
                 </div>
@@ -25,19 +25,19 @@ const Footer = () => {
                 <div>                    
                     <ul>
                         <li>
-                            <a href="#services">Basic </a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Basic </a>
                         </li>
                         <li>
-                            <a href="#services">Standard</a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Standard</a>
                         </li>
                         <li>
-                            <a href="#services">Kundali Milan</a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Kundali Milan</a>
                         </li>
                         <li>
-                            <a href="#services">Question service</a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Question service</a>
                         </li>
                         <li>
-                            <a href="#services">Numerology service</a>
+                            <a href="#services" className="hover:text-[#b4c3c1]">Numerology service</a>
                         </li>                        
                     </ul>
                 </div>
@@ -57,13 +57,13 @@ const Footer = () => {
                     <p>Connect with us: </p>
                     <ul>
                         <li className="p-2">
-                            <a href="https://www.facebook.com/devarshi.dutta" class="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                            <a href="https://www.facebook.com/devarshi.dutta" className="facebook hover:text-[#b4c3c1]"><i class="fa-brands fa-facebook fa-xl"></i></a>
                         </li>
                         <li className="p-2">
-                            <a href="https://twitter.com/DevarshiDutta" class="twitter"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            <a href="https://twitter.com/DevarshiDutta" className="twitter hover:text-[#b4c3c1]"><i class="fa-brands fa-twitter fa-xl"></i></a>
                         </li>
                         <li className="p-2">
-                            <a href="https://www.instagram.com/jyotish_108_/" class="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                            <a href="https://www.instagram.com/jyotish_108_/" className="instagram hover:text-[#b4c3c1]"><i class="fa-brands fa-instagram fa-xl"></i></a>
                         </li>                        
                     </ul>
                 </div>
