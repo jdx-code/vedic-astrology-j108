@@ -3,7 +3,7 @@ import devarshi from '/devarshi.jpeg'
 const About = (props) => {
 
     return (        
-        <div className='about-section md:w-full'>
+        <div className='about-section md:w-full' id="about">
             <div className='py-10 flex flex-col-reverse md:w-[80%] md:mx-auto md:flex-row md:items-center'> 
                 <div className='w-[80%] mx-auto md:w-[70%] lg:w-[60%]'>
                     <h1 className='text-4xl font-extrabold my-4'>

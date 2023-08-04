@@ -14,7 +14,7 @@ const Testimonials = () => {
       showThumbs={false} // Hide the navigation dots
     >
       {testimonialData.map((item, index) => (
-        <div key={index} className="testimonial-section flex flex-col items-center w-[95%] mx-auto p-12">
+        <div key={index} className="testimonial-section flex flex-col items-center w-[95%] mx-auto p-12" id="testimonials">
           <img src={`/testimonials/${item.img}`} alt={`Testimonial ${index + 1}`} />
           <p className="text-xl font-bold">{item.name}</p>
           <p className="text-md font-bold">{item.location}</p>          
