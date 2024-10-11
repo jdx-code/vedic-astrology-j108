@@ -47,14 +47,7 @@ export default [
         "name" : "Bornali",
         "location" : "Hungary",
         "comment" : "Devarshi da, I would like to take this opportunity to express my heartfelt gratitude to you for bringing optimism into my life. Your sincere, truthful and faultless intuition through the spirit of astrology has profoundly contributed in providing stability to my personal and professional life for which I'm extremely thankful. Your analysis is indisputable and astute and the transparency with which you bring meaning into the planetary transits and influences is deeply acknowledged.",
-    },
-    {
-        "id" : 8,
-        "img" : "8.jpeg",
-        "name" : "Priyasmi",
-        "location" : "Delhi",
-        "comment" : "Trustworthy would just be the word that I would use to define Devarshi Dutta and his astrology based readings and analysis. In a world full of quacks, amateurs and fake astrologers who have destroyed the credibility of such an ancient science and who have been running scams and setting up their shops just for money while they have very little knowledge about this practice",
-    },
+    },    
     {
         "id" : 9,
         "img" : "9.jpeg",
