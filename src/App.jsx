@@ -17,6 +17,98 @@ import ScrollToTopButton from './components/ScrollToTopButton'
 
 function App() {
 
+  if ("serviceWorker" in navigator && "PushManager" in window) {
+    navigator.serviceWorker.register("/sw.js")
+      .then((registration) => {
+        console.log("✅ Service Worker registered:", registration);
+      })
+      .catch((error) => {
+        console.error("❌ Service Worker registration failed:", error);
+      });
+  }
+
+
+
+
+  
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = atob(base64);
+  return Uint8Array.from([...rawData].map(char => char.charCodeAt(0)));
+}
+
+
+
+const vapidPublicKey = "BHqR_mJzy1jiQLaw5CDoH1JfPQtBxWIpOSYuIDWB440jovkm4CsYYB5Slby0DuBh8CiqAtuFtCq9Z73gMNx3yqI"
+const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
+
+function arrayBufferToBase64Url(buffer) {
+  const base64 = btoa(String.fromCharCode(...new Uint8Array(buffer)));
+  return base64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+
+const registerForPushNotifications = async () => {
+  try {
+    const permission = await Notification.requestPermission();
+    if (permission !== "granted") return;
+
+    // const registration = await navigator.serviceWorker.ready;
+    const registration = await navigator.serviceWorker.register('/sw.js');
+    
+    const subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: convertedVapidKey
+    });
+
+    const p256dh = arrayBufferToBase64Url(subscription.getKey("p256dh"));
+    const auth = arrayBufferToBase64Url(subscription.getKey("auth"));
+
+
+    console.log("P256DH is ", p256dh);
+    console.log("AUTH is", auth);
+
+    const payload = {
+      userId: "e75106f1-84dd-42c1-828e-75792eb42cb2",
+      endpoint: subscription.endpoint,
+      p256dh,
+      auth,
+      tags: "customer_e75106f1-84dd-42c1-828e-75792eb42cb2"
+    };
+
+    console.log("PAY___LOAD___IS : ", payload);
+
+    await fetch(`http://localhost:8080/customers/register-web-subscription`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    console.log("✅ Web push subscription registered");
+
+
+    // ✅ Show a browser notification immediately
+    // new Notification("Subscribed!", {
+    //   body: "You’ve successfully registered for web push notifications. 🎉",
+    //   icon: "/icons/icon-192x192.png" // optional
+    // });
+
+
+
+  } catch (error) {
+    console.error("🚨 Push registration failed", error);
+  }
+};
+
+
+useEffect(() => {
+  registerForPushNotifications();
+}, []);
+
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   
   const salutationCards = salutations.map(item => {
