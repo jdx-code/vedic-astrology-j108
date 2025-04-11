@@ -1,22 +1,32 @@
-
-console.log("SW loaded")
+console.log("SW loaded");
 
 self.addEventListener('push', function (event) {
   console.log('[Service Worker] Push Received.');
 
+  let title = 'Default Title';
+  let body = 'No payload received';
+
   if (event.data) {
-    console.log('[Service Worker] Push had this data:', event.data.text());
-  } else {
-    console.log('[Service Worker] No data in push event');
+    try {
+      const payload = JSON.parse(event.data.text());
+      console.log('[Service Worker] Push had this data:', payload);
+
+      // Check for Azure style wrapped payload
+      title = payload.data?.title || title;
+      body = payload.data?.body || body;
+    } catch (err) {
+      console.error('[Service Worker] Error parsing push data:', err);
+      body = event.data.text(); // fallback
+    }
   }
 
   const options = {
-    body: event.data ? event.data.text() : 'Hey buddy !! No payload',
+    body,
     icon: 'icon.png',
     badge: 'badge.png'
   };
 
   event.waitUntil(
-    self.registration.showNotification('Test Notification', options)
+    self.registration.showNotification(title, options)
   );
 });
